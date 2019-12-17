@@ -2,51 +2,66 @@
 <html>
 <head>
 	<title>Contact us!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="normalize.css" type="text/css">
-	<link rel="stylesheet" href="https://use.typekit.net/yml1jtt.css">
-	<link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/490200af58.js" crossorigin="anonymous"></script> <!--font awesome - for icons -->
+	<link rel="stylesheet" href="https://use.typekit.net/yml1jtt.css"> <!--feature font -->
+	<link href="https://fonts.googleapis.com/css?family=Krub:400,700&display=swap" rel="stylesheet"> <!--body font -->
 	<link rel="stylesheet" href="style.css" type="text/css">
 	
 </head>
 <body>
-	
-	<header>
-		<nav>
-			<ul class="topLeft">
-				<li class="logo">
-					<a class="mainNav" id="logo" href="index.html">
-						Overland
-						
-					</a>
-				</li>
-			</ul>
-			<ul class="topNav">
-				<li>
-					<a class="mainNav" href="search.html">
-						<span class="full">Find your dream home</span>
-						<span class="short">Search</span>
-					</a>
-				</li>
-				<li>
-					<a class="mainNav" href="about.html">		<span class="full">About Overland</span>
-						<span class="short">About</span>
-					</a>
-				</li>
-				<li class="onPage">
-					
-						<span class="full">Contact</span>
-						<span class="short">Contact</span>
-					
-				</li>
-				<li>
-					<a class="mainNav" href="terms.html">
-						<span class="full">Terms of Sale</span>
-						<span class="short">Terms</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	<div class="clearFix"></div>
+	<div id="top" class="fullWrap">
+<header>
+			<a href="#mainMenu" class="menuOpen"><span class="fas fa-bars"></span></a>
+			<nav>
+				
+				<ul class="topLeft">
+					<li class="logo">
+						<a class="mainNav" id="logo" href="index.html">
+							Overland
+							
+						</a>
+					</li>
+				</ul>
+				<ul class="topNav">
+					<li>
+						<a class="mainNav" href="search.html">
+							<span class="full">Find your dream home</span>
+							<span class="short">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="mainNav" href="about.html">		<span class="full">About Overland</span>
+							<span class="short">About</span>
+						</a>
+					</li>
+					<li>
+						<a class="mainNav" href="contact.html">	
+							<span class="full">Contact</span>
+							<span class="short">Contact</span>
+						</a>
+					</li>
+					<li>
+						<a class="mainNav" href="terms.html">
+							<span class="full">Terms of Sale</span>
+							<span class="short">Terms</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav id="mainMenu" class="mobileMenu"> <!-- mobile nav -->
+				<a href="#" class="menuClose"><span class="fas fa-times"></span></a>
+				<ul>
+					<li class="dropMenu"><a href="search.html">Find your dream home</a></li>
+					<li class="dropMenu"><a href="about.html">About Overland</a></li>
+					<li class="dropMenu"><a href="contact.html">Contact</a></li>
+					<li class="dropMenu"><a href="terms.html">Terms of Sale</a></li>
+
+				</ul>
+				
+			</nav>
+		<div class="subNav"></div>
 	</header>
 	
 <main class="contactPage">
@@ -71,12 +86,12 @@
 			<form>
 				
 				<div>
-					<input class="land" id="nameField" type="text" placeholder="Name">
+					<input class="clearText" class="land" id="nameField" type="text" placeholder="Name" onclick=this.placeholder="">
 					<!-- <label for="nameField"></label> -->
 				
 				</div>
 				<div>	
-					<input id="emailField" type="text" placeholder="Email">
+					<input class="clearText" id="emailField" type="text" placeholder="Email" onclick=this.placeholder="">
 					<!-- <label for="emailField"></label> -->
 				</div>
 				<div>							
@@ -100,7 +115,7 @@
 					<!-- <label for="inquiryType">Inquiry Type</label>-->
 				</div>
 				<div>		
-					<textarea id="message" placeholder="Type your question or message here"></textarea>
+					<textarea class="clearText" id="message" placeholder="Type your question or message here"  onfocus=this.placeholder=""></textarea>
 
 					<!-- <label for="message"></label> in case I want to put a label -->
 				</div>
@@ -113,14 +128,16 @@
 	</div> 
 	
 		<ul class="social">
-			<li><img src="assets/instalogo.png" alt="Instagram"></li>
-			<li><img src="assets/twitter.png" alt="Twitter"></li>
-			<li><img src="assets/vimeo.png" alt="Vimeo"></li>
+			<li><a href="#"><img src="assets/instalogo.png" alt="Instagram"></a></li>
+			<li><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
+			<li><a href="#"><img src="assets/vimeo.png" alt="Vimeo"></a></li>
 		</ul>
-	
+	<div><a href="#top" class="jump"><span class="fas fa-angle-up"></span></a></div>
 </main>
+</div>
 	<footer>
 		&copy; 2019 Overland Holdings
 	</footer>
+	<script type="text/javascript" src="script/overland.js"></script>
 </body>
 </html>

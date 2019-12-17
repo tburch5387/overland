@@ -2,57 +2,93 @@
 <html>
 <head>
 	<title>About Overland</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="normalize.css" type="text/css">
-	<link rel="stylesheet" href="https://use.typekit.net/yml1jtt.css">
+	<script src="https://kit.fontawesome.com/490200af58.js" crossorigin="anonymous"></script> <!--font awesome - for icons -->
+	<link rel="stylesheet" href="https://use.typekit.net/yml1jtt.css"> <!-- feature font -->
+	<link href="https://fonts.googleapis.com/css?family=Krub:400,700&display=swap" rel="stylesheet"> <!--body font -->
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-	<header>
-		<nav>
-			<ul class="topLeft">
-				<li class="logo">
-					<a class="mainNav" id="logo" href="index.html">
-						Overland
-						
-					</a>
-				</li>
-			</ul>
-			<ul class="topNav">
-				<li>
-					<a class="mainNav" href="search.html">
-						<span class="full">Find your dream home</span>
-						<span class="short">Search</span>
-					</a>
-				</li>
-				<li class="onPage">
-						<span class="full">About Overland</span>
-						<span class="short">About</span>
-					
-				</li>
-				<li>
-					<a class="mainNav" href="contact.html">	
-						<span class="full">Contact</span>
-						<span class="short">Contact</span>
-					</a>
-				</li>
-				<li>
-					<a class="mainNav" href="terms.html">
-						<span class="full">Terms of Sale</span>
-						<span class="short">Terms</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	<div class="clearFix">	</div>
-</header>
-	<h3>Our goals</h3>
-	<ul>
-		<li>To preserve wide open spaces</li>
-		<li>To promote and raise awareness for native species loss</li>
-		<li>To put you in your dream home</li>
-	</ul>
-	<footer>
-		&copy; 2019 Overland Holdings
-	</footer>
+	<div class="aboutPage"></div>
+	<div class="fullWrap">
+<header>
+			<a href="#mainMenu" class="menuOpen"><span class="fas fa-bars"></span></a>
+			<nav>
+				
+				<ul class="topLeft">
+					<li class="logo">
+						<a class="mainNav" id="logo" href="index.html">
+							Overland
+							
+						</a>
+					</li>
+				</ul>
+				<ul class="topNav">
+					<li>
+						<a class="mainNav" href="search.html">
+							<span class="full">Find your dream home</span>
+							<span class="short">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="mainNav" href="about.html">		<span class="full">About Overland</span>
+							<span class="short">About</span>
+						</a>
+					</li>
+					<li>
+						<a class="mainNav" href="contact.html">	
+							<span class="full">Contact</span>
+							<span class="short">Contact</span>
+						</a>
+					</li>
+					<li>
+						<a class="mainNav" href="terms.html">
+							<span class="full">Terms of Sale</span>
+							<span class="short">Terms</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav id="mainMenu" class="mobileMenu"> <!-- mobile nav -->
+				<a href="#" class="menuClose"><span class="fas fa-times"></span></a>
+				<ul>
+					<li class="dropMenu"><a href="search.html">Find your dream home</a></li>
+					<li class="dropMenu"><a href="about.html">About Overland</a></li>
+					<li class="dropMenu"><a href="contact.html">Contact</a></li>
+					<li class="dropMenu"><a href="terms.html">Terms of Sale</a></li>
+
+				</ul>
+				
+			</nav>
+		<div class="subNav"></div>
+	</header>
+		<main class="about">
+			
+			<div class="aboutContent">
+				<h3>Our mission at Overland...</h3>
+				<section>
+					<p>...is to preserve wide open spaces, to preserve local plant and animal life and raise awareness for native species loss and to help YOU find the home and property that is right for you?
+					</p>
+					<p>What that means, is that we're looking for you. Yes, specifically you. You tree-hugging, earth-saving, land-loving like-minded indivdual you. We pride ourselves on representing a heavily curated selection of properties that speak to a certain type of individual. And we're ok if that turns people off. 
+					</p>	
+					<p>We're not looking to wheel-and-deal, flip and move, or grab and dump. We don't subdivide lots or sell to resellers. We're in the business of making dreams come true. We sell the type of properties that we spent months and years looking for on our own, and we created Overland to save you that hassle. 
+					</p>	
+					<p>So don't wait another minute. <a class="inlineLink" href="contact.html">Drop us a line</a> right now, tell us what you're looking for and let the next dream we sell be yours. 
+					</p>
+					<p>Sincerely,
+						<br>
+						<div id="logoInline">Overland</div>
+
+					</p>
+				</section>
+			</div>
+
+		</main>
+		<footer>
+			&copy; 2019 Overland Holdings
+		</footer>
+	</div>
+	<script type="text/javascript" src="script/overland.js"></script>s
 </body>
 </html>
