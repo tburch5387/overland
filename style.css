@@ -92,10 +92,11 @@ nav li {
 }
 
 .onPage {
-	background-color: rgba(255,255,255,.3);
+	background-color: #F8E8DA;
 	border-top-right-radius: 10px; 
 	border-top-left-radius: 10px;
 	height: 28px;
+	z-index: 9;
 	/*box-shadow: -.25px -.25px .5px #888;*/
 
 }
@@ -274,6 +275,7 @@ nav#mainMenu {
 	z-index: 2;
 }
 
+/*not needed with nav styled by flex
 .clearFix::after {
   content: "";
   clear: both;
@@ -377,11 +379,6 @@ input, textarea, select {
 
 }
 
-input:focus, textarea:focus, select:focus {
-	outline: .5px solid rgba(0, 3, 51, .1);
-	outline-offset: -2px;
-	
-}
 
 ::placeholder {
 	color: #cc9266;
@@ -438,7 +435,7 @@ ul.social {
 }
 
 
-img {
+ul.social img {
 	height: 60px;
 }
 
@@ -449,7 +446,8 @@ img {
 }
 
 .preForm h2{
-	font-size: 3vw;
+	font-size: 6vw;
+	padding-left: 0px;
 }
 
 .social a{
@@ -528,6 +526,7 @@ aside.contentNav {
 	/*background-image: url(assets/mill.jpg);*/
 }
 
+
 nav.contentNav {
 	height: 100%;
 	width: 30%;
@@ -541,7 +540,11 @@ nav.contentNav {
 	box-shadow: inset -10px 0px 15px -4px rgba(53,30,1,0.05);*/
 }
 
+
+
+
 .termDocument button {
+	cursor: pointer;
 	position: absolute;
 	right: 40px;
 	background-color: #F8E8DA;
@@ -566,11 +569,26 @@ label.print {
 }
 
 nav.contentNav ul li {
-	padding: 25px 8px;
+	padding: 25px 10px 25px 8px;
 	display: block;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	text-align: right;
 }
 
+.fa-arrow-alt-circle-up {
+	font-size: 30px;
+	padding-right: 10px;
+}
 
+.contentNav li:hover {
+	background-color: #f2d1b5;
+}
+
+nav.contentNav ul {
+	display: block;
+	width: 100%;
+}
 
 .termDocument {
 	margin-left: 30%;
@@ -587,7 +605,7 @@ h2 {
 	ul.contentNav{
 		padding-left: 10px;
 	}
-/*
+/* looking at a collapsible sidebar?? 
 
 
 .sideExpand {
@@ -631,4 +649,53 @@ h2 {
 
 }
 
+/*styles for search page */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    margin: 20px;
+    grid-gap: 1rem;
+    grid-auto-flow:row;
+}
+
+
+.photoGrid {
+    box-shadow: 0 0 10px 1px rgba(70,40,20,.4);
+    display: grid;
+    height:275px;
+    
+	/*background: url(assets/house1.jpg) top left no-repeat;
+    background-size: cover; */
+}
+/* 
+Class=sneaky only exsists to clean up this mock-up with perfect rows/columns :) 
+*/
+.sneaky {
+    display: none;
+}
+
+@media (min-width: 1100px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr);
+}
+
+.sneaky {
+        display: block;
+}
+}
+    
+.cover {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+    transition: filter 1s ease;
+}
+
+.cover:hover {
+    box-shadow: 0 0 10px 2px rgba(70,40,20,.6);
+    filter: brightness(118%);
+}
 
