@@ -225,7 +225,7 @@ nav#mainMenu {
 
 }
 
-/* make nav appear */
+/* make nav appear - playing with a css only hidden menu */
 #mainMenu:target {
 	display: block;
 	width: 100%;
@@ -542,8 +542,7 @@ nav.contentNav {
 
 
 
-
-.termDocument button {
+.printButton {
 	cursor: pointer;
 	position: absolute;
 	right: 40px;
@@ -555,17 +554,15 @@ nav.contentNav {
 	font-family: "Krub", arial, sans serif;
 }
 
-.termDocument button:hover {
+.printButton:hover {
 	transform: rotate(720deg);
 	background-color: #bf631c;
+	color:#333;
 	transition: .5s;
 
 }
 *:not(:hover) {
 	transition: all .5s;
-}
-label.print {
-	display: none;
 }
 
 nav.contentNav ul li {
@@ -664,7 +661,7 @@ h2 {
 .photoGrid {
   /* container for pics and overlay */
 	position: relative;
- 	 display: grid;
+ 	display: grid;
     height:275px;
 	
 }
