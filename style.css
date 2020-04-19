@@ -656,18 +656,62 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: center;
     margin: 20px;
-    grid-gap: 1rem;
+    grid-gap: 0;
     grid-auto-flow:row;
 }
 
 
 .photoGrid {
-    box-shadow: 0 0 10px 1px rgba(70,40,20,.4);
-    display: grid;
+  /* container for pics and overlay */
+	position: relative;
+ 	 display: grid;
     height:275px;
-    
-	/*background: url(assets/house1.jpg) top left no-repeat;
-    background-size: cover; */
+	
+}
+
+  /*images*/  
+  .cover {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter .5s ease;
+}
+
+/*overlay on hover*/
+.homeTitle {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,.6);
+    height: 25%;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+
+.overlayLink {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #bf631c;
+}
+
+.overlayLink:hover {
+	filter: brightness(150%);
+	text-decoration: underline;
+	font-size: 110%;
+}
+
+.cover:hover {
+    filter: brightness(125%);
+    cursor: pointer;
+}
+
+.photoGrid:hover .homeTitle {
+	opacity: 100%;
 }
 /* 
 Class=sneaky only exsists to clean up this mock-up with perfect rows/columns :) 
@@ -685,17 +729,16 @@ Class=sneaky only exsists to clean up this mock-up with perfect rows/columns :)
         display: block;
 }
 }
-    
-.cover {
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(100%);
-    transition: filter 1s ease;
+
+.action {
+	text-align: center;
+	padding: 0px 20px 5px 20px ;
 }
 
-.cover:hover {
-    box-shadow: 0 0 10px 2px rgba(70,40,20,.6);
-    filter: brightness(118%);
+.action a {
+	color: #bf631c;
 }
 
+.action a:hover {
+	text-decoration: underline;
+}
