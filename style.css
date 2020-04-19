@@ -186,8 +186,9 @@ nav#mainMenu {
 
 #mainMenu li {
 	min-width: 100%;
-	font-size: 0;
-	opacity: 0;
+	font-size: 6vw;
+	/* font-size: 0;
+	opacity: 0; */
 }
 
 #mainMenu li:hover {
@@ -218,8 +219,8 @@ nav#mainMenu {
 }
 
 #mainMenu:not(:target) li{
-	opacity: 0;
-	transition: all .5s ease;
+	opacity: 0; 
+	/* transition: all .5s ease; */
 
 }
 
@@ -233,9 +234,9 @@ nav#mainMenu {
 }
 
 #mainMenu:target li{
-	font-size: 6vw;
-	opacity: 100%;
-	transition: all .5s ease-out .15s;
+	/* font-size: 6vw;
+	opacity: 100%; */
+	/* transition: all .5s ease-out .15s; */
 }
 
 
