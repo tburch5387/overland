@@ -357,7 +357,7 @@ footer {
 
 fieldset {
 	border: none;
-	display: flex;
+/* 	display: flex; */
 	width: 80%;
 	padding: 0;
 }
